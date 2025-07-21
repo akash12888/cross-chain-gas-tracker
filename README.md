@@ -15,37 +15,6 @@ A sleek, responsive Next.js dashboard for monitoring **real-time gas prices** ac
 
 ---
 
-## 🗂️ File Structure
-
-src/
-├── app/ 
-│ ├── favicon.ico
-│ ├── globals.css # Global styles
-│ ├── layout.tsx # Root layout
-│ └── page.tsx # Entry page
-│
-├── components/ # UI & widgets
-│ ├── CandleStickChart.tsx # Chart for gas volatility
-│ ├── ChainSelector.tsx # Dropdown for chains
-│ ├── Dashboard.tsx # Layout & content manager
-│ ├── GasWidget.tsx # Live gas display panel
-│ └── SimulationPanel.tsx # Wallet simulation logic
-│
-├── services/ # Business logic layer
-│ ├── chainService.ts # Connects to RPCs & handles sockets
-│ ├── gasCalculator.ts # Converts & computes transaction costs
-│ └── uniswapService.ts # Fetches ETH/USD from Uniswap V3 logs
-│
-├── store/
-│ └── gasStore.ts # Zustand store for live/sim toggle, state
-│
-├── types/
-│ └── index.ts # TypeScript interfaces & types
-│
-├── utils/
-│ ├── constants.ts # Supported chains, configs
-│ └── helpers.ts # Formatters (Gwei, ETH, USD, etc.)
-
 
 ---
 
@@ -54,14 +23,16 @@ src/
  
 ### 1. Clone & Install
 
-=
+
 git clone https://github.com/akash12888/cross-chain-gas-tracker.git
 cd cross-chain-gas-tracker
-npm install   # or yarn install
+npm install   
+or yarn install
 
 ### 2. Start the Development Server
 
-npm run dev   # or yarn dev
+npm run dev  
+or yarn dev
 Open your browser at: http://localhost:3000
 
 📚 How to Use
