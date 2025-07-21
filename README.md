@@ -1,22 +1,27 @@
 Real-Time Cross-Chain Gas Price Tracker with Wallet Simulation
-Overview
-A Next.js dashboard for tracking real-time gas prices on Ethereum, Polygon, and Arbitrum. The dashboard connects directly to native WebSocket RPC endpoints—no third-party APIs—for on-chain data, including base and priority gas fees. It parses the live ETH/USD price from Uniswap V3’s on-chain pool and features an interactive simulation panel, letting you compare the cost of sending crypto across chains in USD and native tokens. Candlestick charts visualize 15-min gas price volatility intervals. All state management is handled by Zustand for seamless operation in both live and simulation modes.
+🚀 Overview
+A modern, responsive Next.js dashboard for monitoring real-time gas prices across Ethereum, Polygon, and Arbitrum. This platform connects directly to on-chain WebSocket RPC endpoints—completely avoiding third-party APIs. It features an interactive simulation panel to visualize and compare the USD and native token costs of transactions across networks. Live ETH/USD pricing is sourced directly from Uniswap V3’s on-chain pool. A dynamic candlestick chart tracks 15-minute gas price volatility. Zustand manages all app state for smooth switching between live and simulation modes.
 
-Features
-Live gas prices for Ethereum, Polygon, and Arbitrum (direct via native RPC, not APIs)
+✨ Features
+Live Gas Prices:
+Track Ethereum, Polygon, and Arbitrum gas prices in real time using direct WebSocket connections (no APIs).
 
-Wallet simulation: Enter any transaction amount and instantly compare cost across chains in both native token and USD
+Wallet Simulation:
+Enter any transaction amount and see instant cross-chain cost comparisons in both native tokens and USD—updated live.
 
-Direct on-chain Uniswap price: ETH/USD updated in real time from Uniswap V3 (no Uniswap SDK)
+Direct On-Chain Uniswap Pricing:
+ETH/USD price is parsed directly from Uniswap V3’s on-chain pool; no Uniswap SDK or third-party price feeds needed.
 
-Candlestick charts: 15-minute aggregated gas price volatility for each chain
+Candlestick Charts:
+Interactive charts display 15-minute aggregated gas price volatility for each supported network.
 
-Modern, responsive UI: Built with Next.js and Tailwind CSS
+Modern Responsive UI:
+Built from the ground up with Next.js and Tailwind CSS for a seamless experience on any device.
 
-Seamless mode switching: Zustand manages shared live and simulation state
+Seamless Live/Simulation State:
+Zustand provides fast, global state management, enabling effortless toggling between live and simulation modes.
 
-Project Structure
-text
+🗂️ Project Structure
 src/
 ├── app/
 │   ├── favicon.ico         # Dashboard favicon
@@ -40,25 +45,26 @@ src/
 ├── utils/
 │   ├── constants.ts
 │   └── helpers.ts
-Getting Started
-1. Clone and Install
-bash
-git clone https://github.com/akash12888/cross-chain-gas-tracker.git
-cd cross-chain-gas-tracker
-npm install
-# or
-yarn install
-
+🛠️ Getting Started
+1. Clone & Install
+  git clone https://github.com/akash12888/cross-chain-gas-tracker.git
+  cd cross-chain-gas-tracker
+  npm install
+  # or
+  yarn install
 2. Run the App
-bash
-npm run dev
-# or
-yarn dev
-Visit http://localhost:3000.
+  npm run dev
+  # or
+  yarn dev
+Visit: http://localhost:3000
 
-Usage
-Live Mode: Monitor on-chain gas price and Uniswap-based ETH/USD price updates in real time.
+📚 Usage Guide
+Live Mode:
+Monitor live gas price data and Uniswap-based ETH/USD price updates in real time.
 
-Simulation Mode: Enter an amount (e.g., 0.5 ETH) to instantly see cross-chain transaction cost breakdowns.
+Simulation Mode:
+Enter any amount (e.g., 0.5 ETH) and instantly see a table comparing the full transaction cost (gas + value) across all chains.
 
-Visualization: Switch between chains, explore candlestick charts, and compare volatility and network fees.
+Visualization:
+Switch between supported chains, explore interactive candlestick charts, and compare network volatility and transaction fees at a glance.
+
