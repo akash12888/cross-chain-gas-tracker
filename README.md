@@ -51,9 +51,10 @@ src/
 
 ## 🛠️ Getting Started
 
+ 
 ### 1. Clone & Install
 
-```bash
+=
 git clone https://github.com/akash12888/cross-chain-gas-tracker.git
 cd cross-chain-gas-tracker
 npm install   # or yarn install
