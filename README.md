@@ -1,70 +1,87 @@
-Real-Time Cross-Chain Gas Price Tracker with Wallet Simulation
-🚀 Overview
-A modern, responsive Next.js dashboard for monitoring real-time gas prices across Ethereum, Polygon, and Arbitrum. This platform connects directly to on-chain WebSocket RPC endpoints—completely avoiding third-party APIs. It features an interactive simulation panel to visualize and compare the USD and native token costs of transactions across networks. Live ETH/USD pricing is sourced directly from Uniswap V3’s on-chain pool. A dynamic candlestick chart tracks 15-minute gas price volatility. Zustand manages all app state for smooth switching between live and simulation modes.
+# ⚡ Real-Time Cross-Chain Gas Price Tracker with Wallet Simulation
 
-✨ Features
-Live Gas Prices:
-Track Ethereum, Polygon, and Arbitrum gas prices in real time using direct WebSocket connections (no APIs).
+A sleek, responsive Next.js dashboard for monitoring **real-time gas prices** across **Ethereum, Polygon, and Arbitrum**. This tool uses **pure on-chain data** via WebSocket RPCs—**no third-party APIs**. It includes wallet simulation, candlestick charts, and Uniswap V3-based ETH/USD price tracking.
 
-Wallet Simulation:
-Enter any transaction amount and see instant cross-chain cost comparisons in both native tokens and USD—updated live.
+---
 
-Direct On-Chain Uniswap Pricing:
-ETH/USD price is parsed directly from Uniswap V3’s on-chain pool; no Uniswap SDK or third-party price feeds needed.
+## 🚀 Features
 
-Candlestick Charts:
-Interactive charts display 15-minute aggregated gas price volatility for each supported network.
+- 🔴 **Live Gas Prices** via WebSocket (Ethereum, Polygon, Arbitrum)
+- 💸 **Wallet Simulation** (cost in native + USD)
+- 💱 **ETH/USD Price** directly from Uniswap V3 (on-chain logs)
+- 📈 **15-min Candlestick Charts** with volatility insights
+- 🖥️ **Modern UI** built with Tailwind + Zustand + Lightweight Charts
+- 🌐 **Fully client-side** (Next.js 14 App Router)
 
-Modern Responsive UI:
-Built from the ground up with Next.js and Tailwind CSS for a seamless experience on any device.
+---
 
-Seamless Live/Simulation State:
-Zustand provides fast, global state management, enabling effortless toggling between live and simulation modes.
+## 🗂️ File Structure
 
-🗂️ Project Structure
 src/
-├── app/
-│   ├── favicon.ico         # Dashboard favicon
-│   ├── globals.css         # Tailwind/global CSS
-│   ├── layout.tsx          # Root layout wrapper
-│   └── page.tsx            # Main dashboard page
-├── components/
-│   ├── CandleStickChart.tsx
-│   ├── ChainSelector.tsx
-│   ├── Dashboard.tsx
-│   ├── Gaswidget.tsx
-│   └── SimulationPanel.tsx
-├── services/
-│   ├── chainService.ts     # Blockchain/WebSocket logic
-│   ├── gasCalculator.ts    # Cross-chain gas fee calculations
-│   └── uniswapService.ts   # Uniswap V3 price parsing
+├── app/ 
+│ ├── favicon.ico
+│ ├── globals.css # Global styles
+│ ├── layout.tsx # Root layout
+│ └── page.tsx # Entry page
+│
+├── components/ # UI & widgets
+│ ├── CandleStickChart.tsx # Chart for gas volatility
+│ ├── ChainSelector.tsx # Dropdown for chains
+│ ├── Dashboard.tsx # Layout & content manager
+│ ├── GasWidget.tsx # Live gas display panel
+│ └── SimulationPanel.tsx # Wallet simulation logic
+│
+├── services/ # Business logic layer
+│ ├── chainService.ts # Connects to RPCs & handles sockets
+│ ├── gasCalculator.ts # Converts & computes transaction costs
+│ └── uniswapService.ts # Fetches ETH/USD from Uniswap V3 logs
+│
 ├── store/
-│   └── gasStore.ts         # Zustand global store
+│ └── gasStore.ts # Zustand store for live/sim toggle, state
+│
 ├── types/
-│   └── index.ts            # TypeScript type definitions
+│ └── index.ts # TypeScript interfaces & types
+│
 ├── utils/
-│   ├── constants.ts
-│   └── helpers.ts
-🛠️ Getting Started
-1. Clone & Install
-  git clone https://github.com/akash12888/cross-chain-gas-tracker.git
-  cd cross-chain-gas-tracker
-  npm install
-  # or
-  yarn install
-2. Run the App
-  npm run dev
-  # or
-  yarn dev
-Visit: http://localhost:3000
+│ ├── constants.ts # Supported chains, configs
+│ └── helpers.ts # Formatters (Gwei, ETH, USD, etc.)
 
-📚 Usage Guide
-Live Mode:
-Monitor live gas price data and Uniswap-based ETH/USD price updates in real time.
 
-Simulation Mode:
-Enter any amount (e.g., 0.5 ETH) and instantly see a table comparing the full transaction cost (gas + value) across all chains.
+---
 
-Visualization:
-Switch between supported chains, explore interactive candlestick charts, and compare network volatility and transaction fees at a glance.
+## 🛠️ Getting Started
+
+### 1. Clone & Install
+
+```bash
+git clone https://github.com/akash12888/cross-chain-gas-tracker.git
+cd cross-chain-gas-tracker
+npm install   # or yarn install
+
+### 2. Start the Development Server
+
+npm run dev   # or yarn dev
+Open your browser at: http://localhost:3000
+
+📚 How to Use
+✅ Live Mode
+View live gas prices (ETH, MATIC, ARB)
+
+Real-time ETH/USD from Uniswap V3
+
+Auto-refresh using WebSocket RPC streams
+
+🧮 Simulation Mode
+Input amount (e.g., 0.5 ETH)
+
+Instantly view transaction cost per chain
+
+See costs in both native tokens and USD
+
+📊 Visualization
+Interactive candlestick charts (15m aggregation)
+
+Chain selector to compare volatility
+
+Track fee spikes and dips
 
