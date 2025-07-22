@@ -45,7 +45,16 @@ export class ChainService {
 
   private parseGasData(block: ethers.Block): GasPoint {
     const baseFee = Number(block.baseFeePerGas || 0n);
-    const priorityFee = Math.max(baseFee * 0.1, 1e9); 
+    let priorityFee: number;
+
+   
+    if (this.chainName === "polygon") {
+      priorityFee = 30e9; // 30 gwei in wei
+    } else {
+      priorityFee = Math.max(baseFee * 0.1, 1e9); // 1 gwei minimum for others
+    }
+    // ---
+
     return {
       timestamp: Date.now(),
       baseFee,

@@ -86,7 +86,7 @@ const SimulationPanel: React.FC = () => {
             min="0"
           />
           <div className="absolute right-3 top-3 text-sm text-slate-400 pointer-events-none select-none">
-            ETH/MATIC
+            ETH
           </div>
         </div>
       </div>
@@ -143,7 +143,7 @@ const SimulationPanel: React.FC = () => {
                   </p>
                 </div>
               </div>
-              {/* The "Gas: ..." row was completely removed here */}
+            
             </div>
           );
         })}
