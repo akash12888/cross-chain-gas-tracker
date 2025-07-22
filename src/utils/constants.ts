@@ -2,7 +2,7 @@ export const CHAIN_CONFIGS = {
   ethereum: {
     name: 'Ethereum',
     id: 1,
-    rpcUrl: 'wss://0xrpc.io/eth', // More reliable Alchemy demo endpoint
+    rpcUrl: 'wss://0xrpc.io/eth', 
     color: '#627EEA',
     symbol: 'ETH',
     gasLimit: 21000
@@ -10,7 +10,7 @@ export const CHAIN_CONFIGS = {
   polygon: {
     name: 'Polygon',
     id: 137,
-    rpcUrl: 'wss://polygon-bor-rpc.publicnode.com', // Updated endpoint
+    rpcUrl: 'wss://polygon-bor-rpc.publicnode.com', 
     color: '#8247E5',
     symbol: 'MATIC',
     gasLimit: 21000
