@@ -2,11 +2,7 @@ export const CHAIN_CONFIGS = {
   ethereum: {
     name: 'Ethereum',
     id: 1,
-<<<<<<< HEAD
     rpcUrl: 'wss://0xrpc.io/eth',
-=======
-    rpcUrl: 'wss://0xrpc.io/eth', 
->>>>>>> fd05b912f1dc7da79dc9ad0f51fc2e78db1170b4
     color: '#627EEA',
     symbol: 'ETH',
     gasLimit: 21000,
@@ -14,11 +10,7 @@ export const CHAIN_CONFIGS = {
   polygon: {
     name: 'Polygon',
     id: 137,
-<<<<<<< HEAD
     rpcUrl: 'wss://polygon-bor-rpc.publicnode.com',
-=======
-    rpcUrl: 'wss://polygon-bor-rpc.publicnode.com', 
->>>>>>> fd05b912f1dc7da79dc9ad0f51fc2e78db1170b4
     color: '#8247E5',
     symbol: 'MATIC',
     gasLimit: 21000,
@@ -48,9 +40,5 @@ export const CANDLESTICK_INTERVAL = 15 * 60 * 1000; // 15 minutes
 
 export const ETH_PRICE_BOUNDS = {
   MIN: 500,
-<<<<<<< HEAD
-  MAX: 20000,
-=======
   MAX: 20000
->>>>>>> fd05b912f1dc7da79dc9ad0f51fc2e78db1170b4
 };
