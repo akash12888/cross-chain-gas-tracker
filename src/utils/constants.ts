@@ -2,7 +2,7 @@ export const CHAIN_CONFIGS = {
   ethereum: {
     name: 'Ethereum',
     id: 1,
-    rpcUrl: 'wss://eth-mainnet.g.alchemy.com/v2/demo', // More reliable Alchemy demo endpoint
+    rpcUrl: 'wss://0xrpc.io/eth', // More reliable Alchemy demo endpoint
     color: '#627EEA',
     symbol: 'ETH',
     gasLimit: 21000
